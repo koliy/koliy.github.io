@@ -2,10 +2,10 @@
  *       Override CSS Framework
  * --------------------------------- */
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 body {
-  background-color: #f7f7f7;
+  background: linear-gradient(#22a698 2%, #6079c0);
 }
 body,
 button,
@@ -54,8 +54,12 @@ textarea {
   background: #e7e7e7;
 }
 .card {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1);
+/*box-shadow: 0 4px 10px rgba(10,10,10,0.05), 0 0 1px rgba(10,10,10,0.1)*/
+  -webkit-box-shadow: 10px 10px 3px rgba(53,53,53,0.57);
+  -moz-box-shadow: 10px 10px 3px rgba(53,53,53,0.57);
+  box-shadow: 10px 10px 3px rgba(53,53,53,0.57);
 }
 .card + .card,
 .card + .column-right-shadow {
@@ -80,55 +84,58 @@ img.thumbnail {
   max-height: 1.75rem;
 }
 .navbar-main {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background: transparent;
+  font-size: 18px;
 }
-.navbar-main .navbar-menu,
-.navbar-main .navbar-start,
-.navbar-main .navbar-end {
+/* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)*/
+.navbar-menu,
+.navbar-start,
+.navbar-end {
   align-items: stretch;
   display: flex;
   padding: 0;
   flex-shrink: 0;
 }
-.navbar-main .navbar-menu {
+.navbar-menu {
   flex-grow: 1;
   flex-shrink: 0;
   overflow-x: auto;
 }
-.navbar-main .navbar-start {
+.navbar-start {
   justify-content: flex-start;
   margin-right: auto;
 }
-.navbar-main .navbar-end {
+.navbar-end {
   justify-content: flex-end;
   margin-left: auto;
 }
-.navbar-main .navbar-item {
+.navbar-item {
   display: flex;
+  color: #fff;
   align-items: center;
   padding: 1.25rem 0.75rem;
 }
-.navbar-main .navbar-item.is-active {
-  color: #3273dc;
+.navbar-item.is-active {
+  text-decoration: underline;
   background-color: transparent;
 }
 @media screen and (max-width: 1087px) {
-  .navbar-main .navbar-menu {
+  .navbar-menu {
     justify-content: center;
     box-shadow: none;
   }
-  .navbar-main .navbar-start {
+  .navbar-start {
     margin-right: 0;
   }
-  .navbar-main .navbar-end {
+  .navbar-end {
     margin-left: 0;
   }
 }
 .footer {
-  background: #fff;
-}
-.footer .field .button {
   background: transparent;
+  text-align: center;
+  color: rgba(0,0,0,0.49);
+  height: 10px;
 }
 .widget .media {
   border: none;
@@ -395,9 +402,6 @@ img.thumbnail {
   color: #ff3860;
   background: transparent;
   padding: 0;
-}
-.content blockquote footer strong + cite {
-  margin-left: 0.5em;
 }
 /* ---------------------------------
  *        Fix code highlight
